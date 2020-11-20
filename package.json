@@ -66,7 +66,7 @@
 			"project-manager": [
 				{
 					"id": "projectsExplorerFavorites",
-					"name": "Favorites"
+					"name": "Ulubione"
 				},
 				{
 					"id": "projectsExplorerGit",
@@ -80,7 +80,7 @@
 				},
 				{
 					"id": "projectsExplorerAny",
-					"name": "Any",
+					"name": "Dowolny",
 					"when": "projectManager.canShowTreeViewAny"
 				},
 				{
@@ -95,7 +95,7 @@
 				},
 				{
 					"id": "projectManagerHelpAndFeedback",
-					"name": "Help and Feedback",
+					"name": "Pomoc i opinie",
 					"visibility": "collapsed"
 				}
 			]
@@ -103,17 +103,17 @@
 		"viewsWelcome": [
 			{
 				"view": "projectsExplorerFavorites",
-				"contents": "No projects saved yet.\nIn order to save projects, you have to open a folder or workspace first.\n[Open a Folder](command:_projectManager.openFolderWelcome)\n[Open a Workspace](command:workbench.action.openWorkspace)\nTo learn more about how to use Project Manager in VS Code [read the docs](http://github.com/alefragnani/vscode-project-manager/#project-manager).",
+				"contents": "Brak zapisanych projektów.\nOtwórz najpierw folder lub obszar roboczy aby zapisać projekt.\n[Open a Folder](command:_projectManager.openFolderWelcome)\n[Open a Workspace](command:workbench.action.openWorkspace)\nAby dowiedzieć się więcej na temat  rozszerzenia Project Manager [kiknij tutaj](http://github.com/alefragnani/vscode-project-manager/#project-manager).",
 				"when": "workbenchState == empty"
 			},
 			{
 				"view": "projectsExplorerFavorites",
-				"contents": "No projects saved yet.\nIn order to save the current folder/workspace as a project, execute the command:\n[Project Manager: Save Project](command:projectManager.saveProject)\nTo learn more about how to use Project Manager in VS Code [read the docs](http://github.com/alefragnani/vscode-project-manager/#project-manager).",
+				"contents": "Brak zapisanych projektów.\nAby zapisać bieżący folder/obszar roboczy jako projekt, wykonaj polecenie:\n[Project Manager: Zapisz Projekt](command:projectManager.saveProject)\nAby dowiedzieć się więcej na temat  rozszerzenia Project Manager [kiknij tutaj](http://github.com/alefragnani/vscode-project-manager/#project-manager).",
 				"when": "workbenchState != empty"
 			},
 			{
 				"view": "projectsExplorerGit",
-				"contents": "No projects detected.\nIn order to detect Git projects, you have to configure the `baseFolders` where the Git projects are.\n[Open Settings](command:workbench.action.openSettings?%5B%22projectManager.git.baseFolders%22%5D)\n[I don't need Git projects](command:projectManager.hideGitWelcome)\nIt also supports detection of SVN or Mercurial repositories, VS Code or any other folder.\nTo learn more about how to use Project Manager in VS Code [read the docs](https://github.com/alefragnani/vscode-project-manager/#available-settings)."
+				"contents": "Nie wykryto projektów.\nAby wykryć projekty Git, skonfiguruj ustawienie `baseFolders` podając ścieżkę do projektów Git.\n[Otwórz ustawienia](command:workbench.action.openSettings?%5B%22projectManager.git.baseFolders%22%5D)\n[Nie potrzebuję projektów Git](command:projectManager.hideGitWelcome)\nWykrywa także repozytoria SVN lub Mercurial, VS Code oraz inne foldery.\nAby dowiedzieć się więcej na temat  rozszerzenia Project Manager [kiknij tutaj](https://github.com/alefragnani/vscode-project-manager/#available-settings)."
 			}
 		],
 		"commands": [
@@ -478,13 +478,13 @@
 				},
 				"projectManager.sortList": {
 					"type": "string",
-					"default": "Name",
+					"default": "Nazwa",
 					"description": "%projectManager.configuration.sortList.description%",
 					"enum": [
-						"Saved",
-						"Name",
-						"Path",
-						"Recent"
+						"Zapisane",
+						"Nazwa",
+						"Ścieżka",
+						"Ostatnio używane"
 					]
 				},
 				"projectManager.groupList": {
@@ -651,18 +651,18 @@
 				},
 				"projectManager.openInCurrenWindowIfEmpty": {
 					"type": "string",
-					"default": "always",
+					"default": "zawsze",
 					"enum": [
-						"always",
-						"onlyUsingCommandPalette",
-						"onlyUsingSideBar",
-						"never"
+						"zawsze",
+						"tylkoUżywającPaletyPoleceń",
+						"tylkoUżywającBocznegoPaska",
+						"nigdy"
 					],
 					"enumDescriptions": [
-						"Whenever you call the Open in New Window command, it will open in the current window, if empty",
-						"Only open in the current window if you use the Command Palette",
-						"Only open in the current window if you use the Side Bar",
-						"Works as today. The Open in New Window command will always open in New Window"
+						"Polecenie otwórz w nowym oknie, otwiera w bieżącym oknie tylko jeśli jest puste.",
+						"Otwieraj w bieżącym oknie tylko przy użyciu palety poleceń.",
+						"Otwieraj w bieżącym oknie tylko przy użyciu bocznego paska",
+						"Polecenie otwórz w nowym oknie zawsze otwiera nowe okno."
 					],
 					"description": "%projectManager.configuration.openInCurrenWindowIfEmpty.description%"
 				}
@@ -715,5 +715,10 @@
 		"vscode-ext-codicons": "^1.1.0",
 		"vscode-ext-help-and-feedback-view": "^1.0.0",
 		"walker": "^1.0.7"
+	},
+	"__metadata": {
+		"id": "1b747f06-3789-4ebd-ac99-f1fe430c3347",
+		"publisherId": "3fbdef65-bdf5-4723-aeaf-9e12a50546ef",
+		"publisherDisplayName": "Alessandro Fragnani"
 	}
 }
